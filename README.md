@@ -4,7 +4,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=bayu1s&label=Profile%20views&color=129e00&style=plastic" alt="ums-l200220027.github.io.git" /> </p>
 <img align="right" alt="Coding" width="250" height="400" src="byu.jpg">
 
-- 👨‍💻 You can also check out my portfolio at [https://github.com/ums-l200220027/ums-l200220027.github.io.git](https://github.com/ums-l200220027/ums-l200220027.github.io.git)
+- 👨‍💻 Tugas IPDS [https://github.com/ums-l200220027/ums-l200220027.github.io.git](https://github.com/ums-l200220027/ums-l200220027.github.io.git)
 
 - 📫 How to reach me *l200220027@student.ums.ac.id*
 
