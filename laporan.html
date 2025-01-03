@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Clustering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .analysis {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laporan Clustering</h1>
+    <h2>Pendahuluan</h2>
+    <p>
+        Laporan ini berisi langkah-langkah yang dilakukan untuk proses clustering pada data percakapan grup WhatsApp, 
+        mulai dari pembersihan data, vektorisasi, clustering menggunakan <strong>Metaflow</strong>, 
+        hingga analisis hasil.
+    </p>
+
+    <h2>Langkah-langkah yang Dilakukan</h2>
+    <ol>
+        <li><strong>Ekspor Data WhatsApp</strong>: Data dari beberapa grup WhatsApp diekspor dan digabungkan menjadi satu file (<code>data_group.txt</code>).</li>
+        <li><strong>Konversi ke CSV</strong>: File teks diolah di Excel dan disimpan dalam format CSV (<code>data_group.csv</code>).</li>
+        <li><strong>Kompresi File</strong>: File CSV dikompresi menjadi TAR (<code>data_group.tar</code>).</li>
+        <li><strong>Pembersihan Data</strong>: Karakter non-alfanumerik dihapus untuk mengurangi noise.</li>
+        <li><strong>Vektorisasi</strong>: Data teks diubah menjadi representasi numerik menggunakan <code>TfidfVectorizer</code>.</li>
+        <li><strong>Clustering</strong>: Data dikelompokkan menjadi 3, 4, dan 5 cluster menggunakan algoritma KMeans di Metaflow.</li>
+        <li><strong>Analisis Hasil</strong>: Kata-kata teratas dalam setiap cluster dianalisis untuk mengidentifikasi tema.</li>
+    </ol>
+
+    <h2>Hasil Clustering</h2>
+    <h3>3 Clusters</h3>
+    <pre>
+Cluster 0: 211
+Cluster 1: 62
+Cluster 2: pak
+    </pre>
+
+    <h3>4 Clusters</h3>
+    <pre>
+Cluster 0: grup
+Cluster 1: ini
+Cluster 2: undang
+Cluster 3: tautan
+    </pre>
+
+    <h3>5 Clusters</h3>
+    <pre>
+Cluster 0: ini
+Cluster 1: online
+Cluster 2: kelas
+Cluster 3: ya
+Cluster 4: minggu
+    </pre>
+
+    <h2>Analisis</h2>
+    <div class="analysis">
+        <p>
+            Hasil clustering menunjukkan bahwa setiap cluster memiliki tema yang berbeda. 
+            Pada clustering 3, tema utama lebih umum, sedangkan pada clustering 4 dan 5, 
+            tema menjadi lebih terperinci dengan pembagian yang lebih spesifik. 
+            Namun, pada clustering 5, beberapa cluster memiliki overlap yang terlihat dari kemunculan kata-kata serupa.
+        </p>
+    </div>
+
+    <h2>Kesimpulan</h2>
+    <p>
+        Proses clustering berhasil mengelompokkan data teks menjadi beberapa kategori. 
+        Clustering dengan 3 atau 4 cluster memberikan hasil yang lebih terfokus, 
+        sementara clustering dengan 5 cluster mulai menunjukkan redundansi.
+    </p>
+
+    <h2>Dokumentasi File</h2>
+    <ul>
+        <li><strong>data_group.txt</strong>: File teks hasil ekspor grup WhatsApp.</li>
+        <li><strong>data_group.csv</strong>: File CSV hasil konversi dari teks.</li>
+        <li><strong>data_group.tar</strong>: File TAR hasil kompresi.</li>
+        <li><strong>scale_data.py</strong>: Script untuk vektorisasi data.</li>
+        <li><strong>many_kmeans_flow.py</strong>: Script untuk clustering menggunakan Metaflow.</li>
+    </ul>
+</body>
+</html>
